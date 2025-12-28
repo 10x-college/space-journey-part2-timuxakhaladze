@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminal X-Omega | Intergalactic Spaceport.</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="warp-overlay">
-        </div>
+        <div class="warp-overlay"></div>
+        <div class="container">
            <h1>TERMINAL X-OMEGA</h1>
            <p>GATEWAY TO THE OUTER RIM SECTOR</p>
         <div class="status-bar">
            <span>SYSTEM: ONLINE</span>
            <span class="blink">TRAFFIC: HEAVY</span>
            <span>TEMP: -270°C</span>
+        </div>
         </div>
     </header>
     <main>
@@ -77,6 +79,8 @@
             <button>BOOK PASSAGE</button>
         </div>
         </article>
+        </div>
+        </section>
           <section id="schedule">
             <div class="hologram-overlay">
             <h2>LIVE DEPARTURE BOARD.</h2>
@@ -93,27 +97,31 @@
             </thead>
             <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td class="status-go">(for Boarding/On Time)(here is css classes)</td>
+                  <td>>TX-104</td>
+                  <td>Kepler-186f</td>
+                  <td>G-09</td>
+                  <td>04:00</td>
+                  <td class="status-go">Boarding</td>
                 </tr>
                 <tr>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
+                  <td>TS-882</td>
+                  <td>Titan Station</td>
+                  <td>G-12</td>
+                  <td>04:45</td>
                   <td class="status-wait">(for Fueling)</td>
                 </tr>
                 <tr>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
+                  <td>NR-001</td>
+                  <td>Nebula Resort</td>
+                  <td>G-01</td>
+                  <td>05:15</td>
                   <td class="status-delay">(for Delayed)</td>
                 </tr>
                 <tr>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
+                  <td>EH-999</td>
+                  <td>Event Horizon</td>
+                  <td>G-66</td>
+                  <td>06:00</td>
                   <td class="status-stop">(for Cancelled)</td>
                 </tr>
             </tbody>
@@ -125,24 +133,52 @@
            </table>
           </div>
          </section>
-         <main>
-            <section>
+            <section id="booking">
+                <div class="kiosk-interface">
                 <h2>SELF-SERVICE TERMINAL.</h2>
-            </section>
             <form action="#" method="POST"></form>
-         </main>
-    <fieldset>
-        <legend>
-            "IDENTITY VERIFICATION"
-        </legend>
-    </fieldset>
-
-
-
-
-
-
+                   <fieldset>
+                        <legend>IDENTITY VERIFICATION</legend>
+                        <label for="full-designation">Full Designation:</label>
+                        <input type="text" id="full-designation" name="designation" required>
+                        <label for="id-code">ID Code:</label>
+                        <input type="text" id="id-code" name="id_code" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>FLIGHT PARAMETERS</legend>
+                        <label for="planet-choice">Select Destination:</label>
+                        <input list="planets" id="planet-choice" name="planet">
+                        <datalist id="planets">
+                            <option value="Kepler-186f">
+                            <option value="Titan Station">
+                            <option value="Nebula Resort">
+                            <option value="Event Horizon">
+                        </datalist>
+                        <label for="cabin-class">Cabin Class:</label>
+                        <select id="cabin-class" name="cabin">
+                            <option value="economy">Economy (Stasis Pod)</option>
+                            <option value="business">Business (Quarters)</option>
+                            <option value="first">First (Zero-G Suite)</option>
+                        </select>
+                    </fieldset>
+                   <button type="submit">AUTHORIZE CREDIT TRANSFER</button>
+                </form>
+            </div>
+        </section>
     </main>
-    
+    <footer>
+        <p>TERMINAL X-OMEGA // OPERATED BY GALACTIC FEDERATION // SAFETY NOT GUARANTEED</p>
+    </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+    
